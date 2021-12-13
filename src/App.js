@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import React from 'react' ;
 import './App.css';
-
+import Adress from './Component/Profile/adress';
+import Introductions from './Component/Profile/introductions';
+import Fullname from './Component/Profile/fullname';
+import ProfilePhotos from './Component/Profile/profilePhotos';
+import autumn from './autumn.jpg';
+import facebook from './socialmedia/facebook.png';
+import github from './socialmedia/github.png' ;
+import youtube from './socialmedia/youtube.png' ;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <div className="card">
+          < div className="background" >
+           <img className="background" src = {autumn} alt="autumn"  />
+            </div>
+            <br/>
+            <br/>   
+            <br/> 
+            <br/>      
+<div className="main">
+<Fullname/>
+<br/>
+<Introductions/>
+<br/>
+<Adress/>
+</div>
+<div className="photo">
+<ProfilePhotos/>
+</div>
+
+      </div>
+      <div className="social">
+         <a href="https://https://www.facebook.com/farah.agrebi.10/" >
+         <img className="facebook" src = {facebook} alt = "facebook" />
+         </a>
+        <a href="https://https://github.com/Agrebi-Farah" >
+          <img className="github" src = {github} alt = "github"  />
         </a>
-      </header>
+       < a href="https://https://https://www.youtube.com/" >
+         <img className="youtube" src = {youtube} alt = "youtube"  />
+       </a>
+      </div>
+      
     </div>
   );
 }
